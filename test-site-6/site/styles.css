@@ -1,0 +1,68 @@
+@font-face {
+	font-family: 'PP Writer';
+	src: url("../typeface/PPWriter-Regular.otf") format("opentype");
+}
+
+* {
+	margin: 0px;
+	padding: 0px;
+}
+
+body {
+	height: 100vh;
+	background: linear-gradient(315deg, rgba(26,4,47,1) 0%, rgba(7,7,10,1) 50%, rgba(2,4,46,1) 100%);
+	font-family: 'PP Writer', serif;
+	-webkit-font-smoothing: antialiased;
+	font-size: 70px;
+	font-weight: bold;
+	letter-spacing: 5px;
+}
+
+#drop-down-menu-items {
+	height: 100vh;
+
+	/* Flexbox */
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+#drop-down-menu-items > span {
+	color: #97A4AD;
+	transition: color 500ms ease-out;
+}
+
+#drop-down-menu-items > *:hover {
+	color: #FFF;
+	cursor: pointer;
+}
+
+#drop-down-menu-items > * ::selection {
+	background: #A35CD5;
+}
+
+#drop-down-menu-items > span > em > sub {
+	font-size: 25px;
+	font-weight: normal;
+}
+
+#backdrop-spherical-blur {
+	position: absolute;
+	background: #184028;
+	border-radius: 100%;
+	filter: blur(90px);
+
+	transform: rotate(17deg);
+
+	height: 150px;
+	width: 900px;
+
+  	position: absolute;
+  	left: 50%;
+  	margin-left: -450px;
+  	top: 50%;
+  	margin-top: -50px;
+
+  	z-index: -1;
+}
